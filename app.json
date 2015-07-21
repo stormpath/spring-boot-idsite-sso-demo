@@ -1,7 +1,7 @@
 {
   "name": "Spring Boot ID Site Demo",
-  "description": "A Spring Boot web app hooked up to ID Site for easy authentication and SSO",
-  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo",
+  "description": "SpringBootBasic - This tag contains the most basic Spring Boot web app.",
+  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo/tree/SpringBootBasic",
   "keywords": ["spring boot", "social", "identity", "security", "authentication"],
   "success_url": "/"
 }
