@@ -3,5 +3,19 @@
   "description": "A Spring Boot web app hooked up to ID Site for easy authentication and SSO",
   "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo",
   "keywords": ["spring boot", "social", "identity", "security", "authentication"],
-  "success_url": "/"
+  "success_url": "/",
+  "env": {
+    "STORMPATH_APPLICATION_HREF": {
+      "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
+      "value": "changeme"
+    },
+    "STORMPATH_API_KEY_ID": {
+      "description": "The API key ID from your ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    },
+    "STORMPATH_API_KEY_SECRET": {
+      "description": "The API key secret from tyou ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    }
+  }
 }

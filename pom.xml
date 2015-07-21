@@ -31,8 +31,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <groupId>com.stormpath.spring</groupId>
+            <artifactId>spring-boot-starter-stormpath-thymeleaf</artifactId>
+            <version>1.0.RC4.5</version>
         </dependency>
 
     </dependencies>
