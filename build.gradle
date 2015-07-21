@@ -23,5 +23,5 @@ repositories {
 
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.2.5.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.2.5.RELEASE'
+    compile group: 'com.stormpath.spring', name: 'spring-boot-starter-stormpath-thymeleaf', version:'1.0.RC4.5'
 }

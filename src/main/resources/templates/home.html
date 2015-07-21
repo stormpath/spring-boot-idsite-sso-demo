@@ -10,7 +10,9 @@
                     <div class="stormpath-header">
                         <img src="https://stormpath.com/images/template/logo-nav.png"/>
                     </div>
-                    <h1>Hello!</h1>
+                    <h1 th:inline="text">Hello! Welcome to App: [[${appName}]]</h1>
+
+                    <h3 th:inline="text">[[${appDescription}]]</h3>
                 </div>
             </div>
         </div>

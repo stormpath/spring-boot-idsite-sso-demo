@@ -1,6 +1,6 @@
 # Spring Boot ID Site SSO Demo
 
-## You are on the `SpringBootBasic` tag
+## You are on the `SpringBootStormpath` tag.
 
 Use the dropdown above to choose a different tag. Available tags are:
 
@@ -8,7 +8,7 @@ Use the dropdown above to choose a different tag. Available tags are:
 * SpringBootStormpath - The most basic integration between Stormpath and Spring Boot
 * SpringBootStormpathIDSite - A Spring Boot web app that integrates Stormpath ID Site for Single SignOn and hosted views
 
-This demonstrates the most basic Spring Boot app.
+This demonstrates the most basic integration between Stormpath and Spring Boot.
 
 Deploy this tag to Heroku using the button below.
 

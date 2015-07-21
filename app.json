@@ -1,7 +1,21 @@
 {
   "name": "Spring Boot ID Site Demo",
-  "description": "SpringBootBasic - This tag contains the most basic Spring Boot web app.",
-  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo/tree/SpringBootBasic",
+  "description": "SpringBootStormpath - This tag demonstrates the most basic integration between Stormpath and Spring Boot.",
+  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo/tree/SpringBootStormpath",
   "keywords": ["spring boot", "social", "identity", "security", "authentication"],
-  "success_url": "/"
+  "success_url": "/",
+  "env": {
+    "STORMPATH_API_KEY_ID": {
+      "description": "The API key ID from your ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    },
+    "STORMPATH_API_KEY_SECRET": {
+      "description": "The API key secret from tyou ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    },
+    "STORMPATH_APPLICATION_HREF": {
+      "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
+      "value": "changeme"
+    }
+  }
 }
