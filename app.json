@@ -1,7 +1,7 @@
 {
   "name": "Spring Boot ID Site Demo",
-  "description": "SpringBootStormpath - This tag demonstrates the most basic integration between Stormpath and Spring Boot.",
-  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo/tree/SpringBootStormpath",
+  "description": "SpringBootStormpathIDSite - This tag demonstrates a Spring Boot web app hooked up to ID Site for easy authentication and SSO",
+  "repository": "https://github.com/stormpath/spring-boot-idsite-sso-demo/tree/SpringBootStormpathIDSite",
   "keywords": ["spring boot", "social", "identity", "security", "authentication"],
   "success_url": "/",
   "env": {
@@ -16,6 +16,22 @@
     "STORMPATH_APPLICATION_HREF": {
       "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
       "value": "changeme"
+    },
+    "STORMPATH_WEB_APPLICATION_DOMAIN": {
+      "description": "The fully qualified domain name of your application. This will be something like: my-app-name.herokuapp.com and it should match the App Name you chose above.",
+      "value": "changeme"
+    },
+    "STORMPATH_SSO_MESSAGE_PRIMARY": {
+      "description": "The primary message that will show on the restricted secret page.",
+      "value": "The secret ingredient is chocolate."
+    },
+    "STORMPATH_SSO_MESSAGE_SECONDARY": {
+      "description": "The secondary message that will show on the restricted secret page.",
+      "value": "Yummy!"
+    },
+    "STORMPATH_SSO_CROSS_LINK": {
+      "description": "The fully qualified URL to the restricted page of the other site you setup for SSO",
+      "value": "https://your-app-name.herokuapp.com/restricted/secret"
     }
   }
 }
