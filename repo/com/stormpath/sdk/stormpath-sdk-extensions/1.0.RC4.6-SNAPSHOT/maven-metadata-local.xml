@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.stormpath.sdk</groupId>
+  <artifactId>stormpath-sdk-extensions</artifactId>
+  <version>1.0.RC4.6-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <localCopy>true</localCopy>
+    </snapshot>
+    <lastUpdated>20150929231914</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.RC4.6-SNAPSHOT</value>
+        <updated>20150929231914</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
