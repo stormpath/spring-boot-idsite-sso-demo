@@ -5,6 +5,7 @@ import com.stormpath.sdk.application.Application;
 import com.stormpath.sdk.idsite.AccountResult;
 import com.stormpath.sdk.idsite.IdSiteUrlBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class RestrictedController {
+    @Value("#{ @environment['stormpath.organization'] }")
+    private String organization;
+
+    @Value("#{ @environment['stormpath.show.organization.field'] }")
+    private Boolean showOrganizationField;
+
+    @Value("#{ @environment['stormpath.message.primary'] }")
+    private String primaryMessage;
+
+    @Value("#{ @environment['stormpath.message.secondary'] }")
+    private String secondaryMessage;
+
     @Autowired
     Application app;
 
@@ -27,8 +40,14 @@ public class RestrictedController {
 
     @RequestMapping("/restricted/secret")
     public void idSiteStep1(HttpServletRequest request, HttpServletResponse response) {
-        IdSiteUrlBuilder idSiteBuilder = app.newIdSiteUrlBuilder();
-        idSiteBuilder.setCallbackUri(getBaseURL(request) + ID_SITE_CALLBACK);
+        IdSiteUrlBuilder idSiteBuilder = app.newIdSiteUrlBuilder()
+            .setCallbackUri(getBaseURL(request) + ID_SITE_CALLBACK);
+
+        if (organization != null) {
+            idSiteBuilder
+                .setOrganizationNameKey(organization)
+                .setShowOrganizationField(showOrganizationField);
+        }
 
         response.setStatus(HttpServletResponse.SC_FOUND);
         response.setHeader("Cache-control", "no-cache, no-store");
@@ -43,6 +62,8 @@ public class RestrictedController {
         Account account = accountResult.getAccount();
 
         model.addAttribute("firstName", account.getGivenName());
+        model.addAttribute("primaryMessage", primaryMessage);
+        model.addAttribute("secondaryMessage", secondaryMessage);
 
         return "restricted/secret";
     }
