@@ -34,6 +34,9 @@ public class RestrictedController {
 
     private String getBaseURL(HttpServletRequest request) {
         String url = request.getRequestURL().toString();
+        if (!url.contains("localhost")) {
+            url = "https" + url.substring(url.indexOf(':'));
+        }
         String uri = request.getRequestURI();
         return url.substring(0, url.length() - uri.length());
     }
