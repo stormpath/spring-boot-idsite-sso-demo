@@ -1,6 +1,6 @@
 # Spring Boot ID Site SSO Demo
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/stormpath/spring-boot-idsite-sso-demo)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dogeared/stormpath-id-site-multi-tenant)
 
 ## Purpose
 
