@@ -21,12 +21,6 @@ public class RestrictedController {
     @Value("#{ @environment['stormpath.show.organization.field'] }")
     private Boolean showOrganizationField;
 
-    @Value("#{ @environment['stormpath.message.primary'] }")
-    private String primaryMessage;
-
-    @Value("#{ @environment['stormpath.message.secondary'] }")
-    private String secondaryMessage;
-
     @Autowired
     Application app;
 
