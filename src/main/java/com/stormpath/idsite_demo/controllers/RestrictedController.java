@@ -3,6 +3,7 @@ package com.stormpath.idsite_demo.controllers;
 import com.stormpath.sdk.account.Account;
 import com.stormpath.sdk.application.Application;
 import com.stormpath.sdk.idsite.AccountResult;
+import com.stormpath.sdk.servlet.account.AccountResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -25,15 +26,10 @@ public class RestrictedController {
     @Autowired
     Application app;
 
-    private static final String ID_SITE_CALLBACK = "/restricted/id_site_callback";
-
     @RequestMapping("/restricted/user")
     public String idSiteCallback(HttpServletRequest req, Model model) {
-        AccountResult accountResult = app.newIdSiteCallbackHandler(req).getAccountResult();
-        if (accountResult != null && accountResult.getAccount() != null) {
-            Account account = accountResult.getAccount();
-            model.addAttribute("account", account);
-
+        Account account = AccountResolver.INSTANCE.getAccount(req);
+        if (account != null) {
             return "restricted/user";
         }
 
