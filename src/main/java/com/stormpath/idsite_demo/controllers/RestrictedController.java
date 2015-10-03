@@ -64,11 +64,9 @@ public class RestrictedController {
         AccountResult accountResult = app.newIdSiteCallbackHandler(request).getAccountResult();
         Account account = accountResult.getAccount();
 
-        model.addAttribute("firstName", account.getGivenName());
-        model.addAttribute("primaryMessage", primaryMessage);
-        model.addAttribute("secondaryMessage", secondaryMessage);
+        model.addAttribute("account", account);
 
-        return "restricted/secret";
+        return "restricted/authenticated";
     }
 
     @RequestMapping("/logout")

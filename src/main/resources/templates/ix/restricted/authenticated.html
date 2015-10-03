@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="fragments/head :: head"/></head>
+
+<body>
+
+    <th:block th:include="fragments/nav :: nav"/>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" id="splash-logo">
+          <img src="../img/splash-img.png" class="img-responsive" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="welcome">
+      <div class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <strong th:inline="text">Welcome Back, [[${account.fullName}]]</strong>
+      </div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
