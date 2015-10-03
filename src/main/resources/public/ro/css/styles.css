@@ -1,0 +1,109 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.navbar {
+  font-size: 20px;
+}
+
+.navbar-default {
+  background-color: #c22020;
+  border-color: #000;
+}
+
+.navbar img {
+  padding: 10px;
+  max-width: 60px;
+}
+
+.navbar li {
+  list-style: none;
+  color: #000
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #000;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #FFF;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+/* Header */
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/intro-bg.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#header-text {
+  margin-top: 500px;
+  color: #FFF;
+}
+
+#header-text h1 {
+  font-size: 80px;
+}
+
+#header-text p {
+  font-size: 40px;
+}
+
+/* Promo Bar */
+.promo {
+  background-color: #c22020;
+  color: #000;
+}
+
+.promo .promo-container {
+  padding-top: 20px;
+}
+
+.promo #promo-text {
+  top: 30px;
+}
+
+.promo #promo-text p {
+  font-size: 18px;
+}
+
+/* Slider */
+.featured {
+  margin: 50px 0;
+}
+
+.featured #feature-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.featured h2 {
+  font-size: 40px;
+}
+
+.featured p {
+  font-size: 30px;
+}
+
+/* Splash Logo */
+#splash-logo {
+  padding-top: 100px;
+}
