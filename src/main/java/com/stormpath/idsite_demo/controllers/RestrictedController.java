@@ -21,6 +21,9 @@ public class RestrictedController {
     @Value("#{ @environment['stormpath.show.organization.field'] }")
     private Boolean showOrganizationField;
 
+    @Value("#{ @environment['stormpath.template.root'] }")
+    private String templateRoot = "ro";
+
     @Autowired
     Application app;
 
@@ -45,6 +48,9 @@ public class RestrictedController {
                 .setOrganizationNameKey(organization)
                 .setShowOrganizationField(showOrganizationField);
         }
+
+        // This will be used by id-site to deliver the proper site content
+        idSiteBuilder.setState("site:" + templateRoot);
 
         response.setStatus(HttpServletResponse.SC_FOUND);
         response.setHeader("Cache-control", "no-cache, no-store");
