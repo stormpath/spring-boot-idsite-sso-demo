@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <h1 th:inline="text">
+            [[${request.method}]]
+            [[${request.requestURI}]]
+            [[${request.protocol}]]
+        </h1>
+
+        <h2>Headers</h2>
+        <table>
+            <thead>
+            <tr>
+                <th align="left">Header Name</th>
+                <th align="left">Header Value</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="h : ${headers}">
+                    <td th:text="${h.key}" nowrap="nowrap"/>
+                    <td th:text="${h.value}"/>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Request Properties</h2>
+        <table>
+            <thead>
+            <tr>
+                <th align="left">Property Name</th>
+                <th align="left">Property Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Auth Type</td>
+                <td th:text="${request.authType}"/>
+            </tr>
+            <tr>
+                <td>Character Encoding</td>
+                <td th:text="${request.characterEncoding}"/>
+            </tr>
+            <tr>
+                <td>Content Length</td>
+                <td th:text="${request.contentLength}"/>
+            </tr>
+            <tr>
+                <td>Content Type</td>
+                <td th:text="${request.contentType}"/>
+            </tr>
+            <tr>
+                <td>Context Path</td>
+                <td th:text="${request.contextPath}"/>
+            </tr>
+            <tr>
+                <td>Local Addr</td>
+                <td th:text="${request.localAddr}"/>
+            </tr>
+            <tr>
+                <td>Local Name</td>
+                <td th:text="${request.localName}"/>
+            </tr>
+            <tr>
+                <td>Local Port</td>
+                <td th:text="${request.localPort}"/>
+            </tr>
+            <tr>
+                <td>Locale</td>
+                <td th:text="${request.locale}"/>
+            </tr>
+            <tr>
+                <td>Path Info</td>
+                <td th:text="${request.pathInfo}"/>
+            </tr>
+            <tr>
+                <td>Path Translated</td>
+                <td th:text="${request.pathTranslated}"/>
+            </tr>
+            <tr>
+                <td>Protocol</td>
+                <td th:text="${request.protocol}"/>
+            </tr>
+            <tr>
+                <td>Query String</td>
+                <td th:text="${request.queryString}"/>
+            </tr>
+            <tr>
+                <td>Remote Addr</td>
+                <td th:text="${request.remoteAddr}"/>
+            </tr>
+            <tr>
+                <td>Remote Host</td>
+                <td th:text="${request.remoteHost}"/>
+            </tr>
+            <tr>
+                <td>Remote Port</td>
+                <td th:text="${request.remotePort}"/>
+            </tr>
+            <tr>
+                <td>Remote User</td>
+                <td th:text="${request.remoteUser}"/>
+            </tr>
+            <tr>
+                <td>Requested Session ID</td>
+                <td th:text="${request.requestedSessionId}"/>
+            </tr>
+            <tr>
+                <td>Request URI</td>
+                <td th:text="${request.requestURI}"/>
+            </tr>
+            <tr>
+                <td>Request URL</td>
+                <td th:text="${request.requestURL}"/>
+            </tr>
+            <tr>
+                <td>Secure?</td>
+                <td th:text="${request.secure}"/>
+            </tr>
+            <tr>
+                <td>Server Name</td>
+                <td th:text="${request.serverName}"/>
+            </tr>
+            <tr>
+                <td>Server Port</td>
+                <td th:text="${request.serverPort}"/>
+            </tr>
+            <tr>
+                <td>Servlet Path</td>
+                <td th:text="${request.servletPath}"/>
+            </tr>
+            <tr>
+                <td>User Principal</td>
+                <td th:text="${request.userPrincipal}"/>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
