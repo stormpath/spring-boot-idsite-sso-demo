@@ -17,6 +17,9 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
+                            <th:block th:if="${account != null and #httpServletRequest.requestURI != '/restricted/user'}">
+                                <li><a href="/restricted/user">Shop!</a></li>
+                            </th:block>
                             <th:block th:if="${account}">
                                 <li><a href="/logout">Logout</a></li>
                             </th:block>
