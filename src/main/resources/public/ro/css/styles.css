@@ -107,3 +107,7 @@ a:focus, a:hover {
 #splash-logo {
   padding-top: 100px;
 }
+
+.alert.alert-success.alert-dismissible.fade.in a:hover {
+  color: #0063FF;
+}

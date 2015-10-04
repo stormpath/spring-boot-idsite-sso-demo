@@ -114,3 +114,11 @@ a:focus, a:hover {
 #three-up-container {
   margin-bottom: 100px;
 }
+
+.alert.alert-success.alert-dismissible.fade.in a {
+    color: #000;
+}
+
+.alert.alert-success.alert-dismissible.fade.in a:hover {
+    color: #0063FF;
+}
