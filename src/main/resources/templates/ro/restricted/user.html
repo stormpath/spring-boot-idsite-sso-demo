@@ -9,21 +9,21 @@
 
     <th:block th:include="fragments/nav :: nav"/>
 
+    <div class="container" id="welcome">
+        <div class="alert alert-success alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <strong th:inline="text">
+                Welcome Back, [[${account.fullName}]]!<br/>
+                Be sure to visit our sister store: <a href="https://imperialxchange.com/restricted/user">Imperial Xchange</a>
+            </strong>
+        </div>
+    </div>
+
     <div class="container">
       <div class="row">
         <div class="col-md-12" id="splash-logo">
           <img src="../img/splash-logo.png" class="img-responsive"/>
         </div>
-      </div>
-    </div>
-
-    <div class="container" id="welcome">
-      <div class="alert alert-success alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <strong th:inline="text">
-            Welcome Back, [[${account.fullName}]]!<br/>
-            Be sure to visit our sister store: <a href="https://imperialxchange.com/restricted/user">Imperial Xchange</a>
-        </strong>
       </div>
     </div>
 
