@@ -28,13 +28,20 @@ public class RestrictedController {
     Application app;
 
     @RequestMapping("/restricted/user")
-    public String idSiteCallback(HttpServletRequest req, Model model) {
+    public String restricted(HttpServletRequest req, Model model) {
         Account account = AccountResolver.INSTANCE.getAccount(req);
         if (account != null) {
-            Boolean showCrossLink = (Strings.countOccurrencesOf(req.getRequestURL().toString(), ".") > 1) ? false : true;
+            String url = req.getRequestURL().toString();
+            Boolean showCrossLink = (Strings.countOccurrencesOf(url, ".") > 1) ? false : true;
             model.addAttribute("showCrossLink", showCrossLink);
 
-            return "restricted/user";
+            String template = "restricted/user";
+            if (url.contains("sith")) {
+                template = "restricted/sith";
+            } else if (url.contains("stormtrooper")) {
+                template = "restricted/stormtrooper";
+            }
+            return template;
         }
 
         return "redirect:/login";
