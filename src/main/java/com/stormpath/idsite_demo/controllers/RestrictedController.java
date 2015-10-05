@@ -3,6 +3,7 @@ package com.stormpath.idsite_demo.controllers;
 import com.stormpath.sdk.account.Account;
 import com.stormpath.sdk.application.Application;
 import com.stormpath.sdk.idsite.AccountResult;
+import com.stormpath.sdk.lang.Strings;
 import com.stormpath.sdk.servlet.account.AccountResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,6 +31,9 @@ public class RestrictedController {
     public String idSiteCallback(HttpServletRequest req, Model model) {
         Account account = AccountResolver.INSTANCE.getAccount(req);
         if (account != null) {
+            Boolean showCrossLink = (Strings.countOccurrencesOf(req.getRequestURL().toString(), ".") > 1) ? false : true;
+            model.addAttribute("showCrossLink", showCrossLink);
+
             return "restricted/user";
         }
 
