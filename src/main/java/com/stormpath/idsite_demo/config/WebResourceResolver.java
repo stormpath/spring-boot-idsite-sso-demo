@@ -18,7 +18,7 @@ import javax.annotation.PostConstruct;
 @Configuration
 public class WebResourceResolver extends WebMvcConfigurerAdapter {
     @Value("#{ @environment['stormpath.template.root'] }")
-    private String templateRoot = "ro";
+    private String templateRoot = "ix";
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

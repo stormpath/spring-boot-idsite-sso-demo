@@ -21,6 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <stormpath.version>1.0.RC7.4</stormpath.version>
     </properties>
 
     <repositories>
@@ -41,9 +42,15 @@
 
         <dependency>
             <groupId>com.stormpath.spring</groupId>
-            <artifactId>spring-boot-starter-stormpath-thymeleaf</artifactId>
-            <version>1.0.RC4.6-SNAPSHOT</version>
+            <artifactId>stormpath-thymeleaf-spring-boot-starter</artifactId>
+            <version>${stormpath.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.stormpath.spring</groupId>
+            <artifactId>stormpath-webmvc-spring-boot-starter</artifactId>
+            <version>${stormpath.version}</version>
+        </dependency>
+
 
     </dependencies>
 
