@@ -12,16 +12,17 @@
     <div class="container" id="welcome">
         <div class="alert alert-success alert-dismissible fade in" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <strong th:inline="text">
-                Welcome Back, [[${account.fullName}]]!
-            </strong>
+            <strong th:inline="text">Welcome Back, [[${account.fullName}]]!</strong>
+            <span th:if="${crossLink}">
+                <br/>Visit our <a th:href="@{__${crossLink}__}">sister</a> site!
+            </span>
         </div>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-md-12" id="splash-logo">
-          <img src="../img/splash-logo.png" class="img-responsive" />
+          <img src="../img/splash-logo.png" class="img-responsive"/>
         </div>
       </div>
     </div>

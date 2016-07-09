@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.stormpath.idsite_demo</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.stormpath.idsite-demo</groupId>
+    <artifactId>multi-tenant-sso</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>demo</name>
+    <name>multi-tenant-sso</name>
     <description>Demo project in Spring Boot with Stormpath ID Site</description>
 
     <parent>
@@ -27,11 +27,6 @@
     <dependencies>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.stormpath.spring</groupId>
             <artifactId>stormpath-thymeleaf-spring-boot-starter</artifactId>
             <version>${stormpath.version}</version>
@@ -42,7 +37,6 @@
             <version>${stormpath.version}</version>
         </dependency>
 
-
     </dependencies>
 
     <build>
@@ -50,6 +44,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>
