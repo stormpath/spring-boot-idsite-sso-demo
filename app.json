@@ -18,7 +18,7 @@
       "value": "changeme"
     },
     "STORMPATH_TEMPLATE_ROOT": {
-      "description": "Selector for which set of content to render - rebeloutfitterz or imperialxchange"
+      "description": "Selector for which set of content to render - rebeloutfitterz or imperialxchange",
       "value": "ix"
     }
   }
