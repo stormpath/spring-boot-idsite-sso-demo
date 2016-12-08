@@ -18,7 +18,7 @@ public class IDSiteDemoApplication {
     @Value("#{ @environment['tomcat.ajp.port'] }")
     Integer ajpPort;
 
-    @Value("#{ @environment['tomcat.ajp.enabled'] }")
+    @Value("#{ @environment['tomcat.ajp.enabled'] ?: false }")
     Boolean tomcatAjpEnabled;
 
     public static void main(String[] args) {
