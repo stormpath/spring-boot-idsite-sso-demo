@@ -17,6 +17,10 @@
       "description": "The API key secret from tyou ~/.stormpath/apiKey.properties file",
       "value": "changeme"
     },
+    "STORMPATH_WEB_APPLICATION_DOMAIN": {
+      "description": "This lets Stormpath know that the subdomain for your app is NOT tied to an organization",
+      "value": "<app name>.herokuapp.com"
+    },
     "STORMPATH_TEMPLATE_ROOT": {
       "description": "Selector for which set of content to render - rebeloutfitterz or imperialxchange",
       "value": "ix"
